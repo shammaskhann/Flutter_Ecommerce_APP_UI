@@ -14,10 +14,10 @@ class RoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+      child: InkWell(
+          onTap: onTap,
           child: Container(
               height: 54,
               decoration: BoxDecoration(

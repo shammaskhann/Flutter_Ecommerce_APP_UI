@@ -19,9 +19,14 @@ class OnBoardingScreen extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(15),
-          child: Lottie.network(
-            "https://lottie.host/c18c2667-71b3-47c0-b7e2-e376a6ebb45c/UerW5zq9hE.json",
+          child: Lottie.asset(
+            "assets/animations/onboard_animation.json",
+            height: 300,
+            width: 300,
           ),
+          // child: Lottie.network(
+          //   "https://lottie.host/c18c2667-71b3-47c0-b7e2-e376a6ebb45c/UerW5zq9hE.json",
+          // ),
         ),
         Text(
           "Find 1000+ Offers at \n One Place",
@@ -33,18 +38,15 @@ class OnBoardingScreen extends StatelessWidget {
         ),
         Text('From ordering to paying, that’s all contactless',
             style: AppFont.subtitle1),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
-          child: RoundButton(
-            title: "Get Started",
-            loading: false,
-            onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const AuthOptionScreen()));
-            },
-          ),
+        RoundButton(
+          title: "Get Started",
+          loading: false,
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const AuthOptionScreen()));
+          },
         ),
         BlueTextButton(
           title: 'Are you a Business?',

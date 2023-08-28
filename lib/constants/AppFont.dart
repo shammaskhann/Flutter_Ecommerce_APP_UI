@@ -22,4 +22,6 @@ class AppFont {
       fontFamily: 'Mulish',
       color: Color(0xFF0C9BFE),
       fontWeight: FontWeight.w600);
+  static TextStyle textFieldHintText = const TextStyle(
+      fontSize: 14, fontFamily: 'Mulish', color: Color(0xFF8E8EA9));
 }
