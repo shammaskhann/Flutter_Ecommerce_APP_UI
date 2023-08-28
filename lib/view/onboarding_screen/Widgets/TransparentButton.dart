@@ -7,7 +7,7 @@ class TransparentButton extends StatelessWidget {
   final Icon preIcon;
   final VoidCallback onTap;
   const TransparentButton(
-      {required this.title, required this.preIcon, required this.onTap});
+      {super.key, required this.title, required this.preIcon, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TransparentButton extends StatelessWidget {
             height: 54,
             decoration: BoxDecoration(
               color: Colors.transparent,
-              border: Border.all(color: Color(0xFF8E8EA9)),
+              border: Border.all(color: const Color(0xFF8E8EA9)),
               borderRadius: BorderRadius.circular(16),
             ),
             child: Row(

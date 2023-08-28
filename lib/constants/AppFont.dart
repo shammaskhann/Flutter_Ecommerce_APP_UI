@@ -24,4 +24,9 @@ class AppFont {
       fontWeight: FontWeight.w600);
   static TextStyle textFieldHintText = const TextStyle(
       fontSize: 14, fontFamily: 'Mulish', color: Color(0xFF8E8EA9));
+  static TextStyle heading2 = const TextStyle(
+      fontSize: 18,
+      fontFamily: 'DM Sans',
+      color: Color(0xFF32324D),
+      fontWeight: FontWeight.normal);
 }

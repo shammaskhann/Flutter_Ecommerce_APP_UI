@@ -4,7 +4,7 @@ import 'package:flutter_assignment/constants/AppFont.dart';
 class BlueTextButton extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
-  const BlueTextButton({required this.title, required this.onTap});
+  const BlueTextButton({super.key, required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

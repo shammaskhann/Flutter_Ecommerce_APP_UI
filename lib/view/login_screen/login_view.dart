@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment/Widgets/RoundButton.dart';
+import 'package:flutter_assignment/Widgets/TextButton.dart';
 import 'package:flutter_assignment/constants/AppFont.dart';
 
 import '../../constants/AppColor.dart';
@@ -38,12 +39,12 @@ class _LoginScreenState extends State<LoginScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             ),
             Form(
               key: _formKey,
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
                     TextFormField(
@@ -62,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     TextFormField(
                       controller: loginServices.passwordController,
@@ -93,9 +94,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
             RoundButton(
                 title: 'Login',
                 loading: loginServices.loading,
@@ -104,12 +102,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     setState(() {
                       loginServices.loading = true;
                     });
-                    loginServices.login();
+                    setState(() {
+                      loginServices.login(context);
+                    });
                   }
-                })
+                }),
+            BlueTextButton(title: "Forgot Password", onTap: () {})
           ],
         ),
       )),
+      backgroundColor: Color.fromARGB(255, 238, 238, 238),
     );
   }
 }
